@@ -270,4 +270,4 @@ sudo nginx -t
 
 ---
 
-*Version: 2.0.0 | Zuletzt aktualisiert: $(date +%Y)*
+*Version: 2.0.0 | Zuletzt aktualisiert: 17.09.2026*
