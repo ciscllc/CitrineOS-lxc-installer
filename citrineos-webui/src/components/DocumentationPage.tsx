@@ -17,7 +17,7 @@ export default function DocumentationPage() {
               <li>• Debian 12 (Bookworm)</li>
               <li>• 2GB RAM minimum</li>
               <li>• 10GB Speicherplatz</li>
-              <li>• Node.js 20+</li>
+              <li>• Node.js 24+</li>
             </ul>
           </div>
         </div>
