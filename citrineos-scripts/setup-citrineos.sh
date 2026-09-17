@@ -159,8 +159,8 @@ install_dependencies() {
 }
 
 install_nodejs() {
-    log_progress "Node.js 20 installieren..."
-    curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+    log_progress "Node.js 24 installieren..."
+    curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
     apt-get install -y -qq nodejs
     log_ok "Node.js $(node --version) installiert"
 }
