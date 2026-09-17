@@ -32,17 +32,25 @@ pct push 100 /workspace/citrineos-webui /opt/ --extract 0
 ```bash
 # Auf dem Server ausführen
 cd /opt
-git clone https://github.com/DEIN_REPO/citrineos-installer.git
+git clone https://github.com/USERNAME/citrineos-installer.git
 cd citrineos-installer
 ```
 
 ### Option 4: Direkter Download mit wget/curl
 
 ```bash
-# Auf dem Server ausführen
+# Auf dem Server ausführen (GitHub Release oder direkter Download)
 cd /opt
-wget https://DEINE_URL/citrineos-scripts.tar.gz
-tar -xzf citrineos-scripts.tar.gz
+
+# Von GitHub Releases (empfohlen)
+wget https://github.com/USERNAME/citrineos-installer/archive/refs/tags/v2.0.0.tar.gz
+tar -xzf v2.0.0.tar.gz
+mv citrineos-installer-2.0.0 citrineos-installer
+cd citrineos-installer
+
+# ODER mit curl
+curl -L https://github.com/USERNAME/citrineos-installer/archive/refs/tags/v2.0.0.tar.gz -o citrineos-installer.tar.gz
+tar -xzf citrineos-installer.tar.gz
 ```
 
 ---
@@ -186,6 +194,8 @@ ufw allow 5173/tcp
 | Aufgabe | Befehl |
 |---------|--------|
 | Scripts kopieren | `scp -r citrineos-scripts root@IP:/opt/` |
+| Git Clone | `git clone https://github.com/USERNAME/citrineos-installer.git` |
+| Download Release | `wget https://github.com/USERNAME/citrineos-installer/archive/refs/tags/v2.0.0.tar.gz` |
 | Scripts ausführbar | `chmod +x *.sh` |
 | Installation starten | `./setup-citrineos.sh` |
 | Web-UI installieren | `npm install` |
@@ -193,6 +203,32 @@ ufw allow 5173/tcp
 | Web-UI bauen | `npm run build` |
 | Web-UI als Service | `systemctl enable citrineos-webui` |
 | Logs anzeigen | `journalctl -u citrineos-webui -f` |
+
+---
+
+## 🔗 GitHub Repository einrichten (Optional)
+
+Falls du das Projekt auf GitHub hosten möchtest:
+
+```bash
+# Lokales Git Repository initialisieren
+cd /workspace
+git init
+git add .
+git commit -m "Initial commit: CitrineOS Installer"
+
+# Auf GitHub ein neues Repository erstellen (ohne Initialisierung)
+# Dann Remote hinzufügen und pushen:
+git remote add origin https://github.com/USERNAME/citrineos-installer.git
+git branch -M main
+git push -u origin main
+
+# Tag für Release erstellen
+git tag v2.0.0
+git push origin v2.0.0
+```
+
+**Ersetze `USERNAME` durch deinen GitHub-Benutzernamen!**
 
 ---
 
