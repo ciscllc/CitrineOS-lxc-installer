@@ -93,8 +93,8 @@ sudo ./uninstall-citrineos.sh
 ### Vorbereitung auf dem Server
 
 ```bash
-# Node.js 20 installieren (falls nicht vorhanden)
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+# Node.js 24 installieren (falls nicht vorhanden)
+curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
 apt-get install -y nodejs
 
 # In das Web-UI Verzeichnis wechseln
@@ -238,7 +238,7 @@ git push origin v2.0.0
 - **RAM:** Mindestens 2 GB (4 GB empfohlen)
 - **CPU:** 2 Kerms oder mehr
 - **Speicher:** 10 GB freier Speicherplatz
-- **Node.js:** Version 20+ (für Web-UI)
+- **Node.js:** Version 24+ (für Web-UI)
 - **Internet:** Für Repository-Zugriff und Downloads
 
 ---
