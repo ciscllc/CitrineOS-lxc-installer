@@ -80,7 +80,7 @@ export const INSTALLATION_LOG_MESSAGES: string[] = [
   '[INFO] apt-get update running...',
   '[OK] System packages updated',
   '[INFO] Step 2/10: Installing dependencies...',
-  '[INFO] Installing Node.js 20...',
+  '[INFO] Installing Node.js 24...',
   '[INFO] Installing PostgreSQL 15...',
   '[INFO] Installing Redis 7...',
   '[OK] Dependencies installed',
