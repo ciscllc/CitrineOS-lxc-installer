@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gray-900 text-gray-100;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800 rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded hover:bg-gray-500;
+}
+
+/* Terminal-style output */
+.terminal-output {
+  @apply bg-gray-900 font-mono text-sm text-green-400 p-4 rounded-lg overflow-auto;
+  max-height: 400px;
+}
+
+/* Gradient button */
+.btn-gradient {
+  @apply bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow-lg transition-all duration-200;
+}
+
+/* Card style */
+.card {
+  @apply bg-gray-800/50 backdrop-blur border border-gray-700 rounded-xl p-6;
+}
+
+/* Input style */
+.input-field {
+  @apply w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors;
+}
+
+/* Tab button */
+.tab-button {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.tab-button.active {
+  @apply bg-purple-600 text-white;
+}
+
+.tab-button.inactive {
+  @apply text-gray-400 hover:text-white hover:bg-gray-800;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full bg-gradient-to-r from-purple-600 to-blue-600 transition-all duration-300;
+}
+
+/* Toggle switch */
+.toggle-switch {
+  @apply relative inline-flex items-center cursor-pointer;
+}
+
+.toggle-switch input {
+  @apply sr-only;
+}
+
+.toggle-switch .slider {
+  @apply w-11 h-6 bg-gray-700 rounded-full transition-colors;
+}
+
+.toggle-switch .slider:before {
+  @apply absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform content-[''];
+}
+
+.toggle-switch input:checked + .slider {
+  @apply bg-purple-600;
+}
+
+.toggle-switch input:checked + .slider:before {
+  @apply translate-x-full;
+}
