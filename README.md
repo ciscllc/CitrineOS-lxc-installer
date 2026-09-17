@@ -159,7 +159,7 @@ systemctl start citrineos-webui
 ```bash
 # Dockerfile erstellen
 cat > Dockerfile << 'EOF'
-FROM node:20-alpine
+FROM node:24-alpine
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
